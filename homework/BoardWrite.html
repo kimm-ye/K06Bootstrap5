@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoardWrite.html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#"><img src="https://www.ikosmo.co.kr/images/common/logo_center_v2.jpg" width="120" alt="ikosmo"></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">자유게시판</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">자료실</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">방명록</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">드롭다운</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">subMenu 1</a></li>
+                        <li><a class="dropdown-item" href="#">subMenu 2</a></li>
+                        <li><a class="dropdown-item" href="#">subMenu 3</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <div class="row ps-3" >
+                        <div class="col">
+                            <div class="input-group mt-1">
+                                <input class="form-control" type="text" placeholder="검색" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-warning" type="button">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>   
+            </ul>
+            
+            <ul class="navbar-nav">
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#"><i class="bi bi-person-plus-fill"></i>회원가입</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#"><i class="bi bi-person-lines-fill"></i>회원정보수정</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-right"></i>로그인</a>
+                </li>
+                <li class="nav-item me-1">
+                    <a class="nav-link" href="#"><i class="bi bi-box-arrow-in-left"></i>로그아웃</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row m-1">
+        <!-- 좌측 -->
+        <div class="col-sm-3">
+            <div class="rounded-3" style="background-color: #858585; color: white; 
+                height: 100px; width: 100%; text-align: center; font-size: 1.4em; line-height: 90px;" >웹사이트제작</div>
+            <div class="list-group dropend pt-2">
+                <a class="list-group-item list-group-item-action active" href="#">자유게시판</a>
+                <a class="list-group-item list-group-item-action" href="#">자료실</a>
+                <a class="list-group-item list-group-item-action" href="#">방명록</a>
+                <a class="list-group-item list-group-item-action dropdown-toggle" href="#" data-bs-toggle="dropdown">드롭다운</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">SubMenu1</a></li>
+                    <li><a class="dropdown-item" href="#">SubMenu2</a></li>
+                    <li><a class="dropdown-item" href="#">SubMenu3</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- 우측 -->
+        <div class="col-sm-9 d-grid">
+            <div>
+                <span style="font-size: 2em;">게시판 목록 </span> 
+                <span style="font-size: 1.5em;"> - 자유게시판 </span>
+            </div>
+            <!-- <div class="d-flex"> 
+                <div class="pt-3 ms-auto">
+                    <div class="input-group">
+                        <button class="dropdown-toggle bg-white border" href="#" data-bs-toggle="dropdown">제목</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">작성자</a></li>
+                            <li><a class="dropdown-item" href="#">내용</a></li>
+                        </ul>
+                        <input class="form-control" type="text" placeholder="검색" >
+                        <div class="input-group-append">
+                            <button class="btn btn-warning" type="button">
+                            <i class="bi bi-search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="col-9 pt-3" style="width: 100%;">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                       
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="font-weight: bold; text-align:center; width: 180px;">작성자</td>
+                        <td><input class="form-control" type="text" style="width: 20%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: center;">패스워드</td>
+                        <td><input class="form-control" type="password" style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: center;">제목</td>
+                        <td><input class="form-control" type="text" ></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: center; line-height: 150px;">내용</td>
+                        <td><textarea class="form-control" rows="5" id="comment" name="text"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; text-align: center;">첨부파일</td>
+                        <td>
+                            <input class="form-control" type="file" placeholder="선택된 파일 없음" >
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-light me-1">Basic</button>
+                <button type="button" class="btn btn-primary me-1" onclick="location.href='./BoardView.html'">글쓰기</button>
+                <button type="button" class="btn border me-1">수정하기</button>
+                <button type="button" class="btn btn-success me-1">삭제하기</button>
+                <button type="button" class="btn btn-info me-1">답글쓰기</button>
+                <button type="button" class="btn btn-warning me-1">리스트보기</button>
+                <button type="button" class="btn btn-danger me-1">전송하기</button>
+                <button type="button" class="btn btn-dark me-1">Reset</button>
+                <button type="button" class="btn btn-light me-1">Light</button>
+                <a class="nav-link" href="#">Link</a>
+            </div>
+            <br><br>
+            <div class="d-flex justify-content-center" >
+                <button type="button" class="btn btn-light me-1"><i class="bi bi-arrow-left"></i></button>
+                <button type="button" class="btn btn-light me-1"><i class="bi bi-chevron-double-left"></i></i></button>
+                <button type="button" class="btn btn-primary me-1">1</button>
+                <button type="button" class="btn btn-light me-1">2</button>
+                <button type="button" class="btn btn-light me-1">3</button>
+                <button type="button" class="btn btn-light me-1"><i class="bi bi-chevron-double-right"></i></i></button>
+                <button type="button" class="btn btn-light me-1"><i class="bi bi-arrow-right"></i></button>
+            </div>
+        </div>
+        <hr class="mt-5" style="height: 2px;">
+        <div class="d-flex justify-content-center">
+            Email: qoqozb@gmail.com &nbsp; Mobile: 010-2297-6982 &nbsp; Adrees: 경기도 안양시 동안구 어딘가
+        </div>
+        <div class="d-flex justify-content-center">
+            copyright ⓒ 2021 한국소프트웨어인재개발원.All right reserved.
+        </div>
+    </div>
+</div>
+</body>
+</html>
